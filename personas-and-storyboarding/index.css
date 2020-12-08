@@ -1,0 +1,131 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, header {
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+header {
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+article {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 1em;
+}
+
+header {
+    font-size: larger;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:   aliceblue;
+}
+
+header > * {
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+figcaption {
+    padding-left: 1em;
+    height: 100%;
+}
+
+img {
+    height: 80vh;
+    max-width: 80vw;
+}
+
+h4 {
+    display: inline-block;
+    font-style: italic;
+}
+
+ol#bibliography {
+    list-style: none;
+    counter-reset: bib-counter 1;
+}
+
+ol#bibliography li::before {
+    content: "[" counter(bib-counter) "] ";
+}
+
+div.persona: {
+    order: 2;
+}
+
+div.persona {
+    width: 600pt;
+    height: 600pt;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: red;
+    flex-shrink: 0;
+}
+
+div.persona > div {
+    display: block;
+    background-color: bisque;
+    width: 300pt;
+    height: 300pt;
+    border: 10pt solid white;
+    padding: 1em;
+}
+
+div.persona > div ul {
+    padding-left: 1em;
+    list-style-type: disc;
+}
+
+footer {
+    width: 100%;
+    padding: 1em;
+    background-color: lightgray;
+}

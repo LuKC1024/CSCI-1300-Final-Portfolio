@@ -1,0 +1,213 @@
+<!doctype html>
+
+<html lang="en-US">
+
+<head>
+  <title>Redesign Popeyes</title>
+  <link rel="stylesheet" href="new/popeyes-style.css">
+  <link rel="stylesheet" href="index.css">
+  <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+  <h1>Redesign the Popeyes Website</h1>
+  <p>I found the <a href="https://www.popeyes.com">Popeyes</a> website has some usability problems so redesign it. This
+    page describes the redesigning process.</p>
+  <h2>Identify Usability Problems</h2>
+  <figure id="fig-screenshot">
+    <img src="imgs/popeyes-screenshot.jpg" alt="Screenshot of Popeyes webpage">
+    <figcaption>
+      <strong>Figure 1. Screenshot of the
+        <a href="https://www.popeyes.com">Popeyes homepage</a>
+      </strong>
+      <p>The white bar at the top is the navigation bar. The
+        first screen also includes 'ORDER PICKUP' and 'ORDER DELIVERY' buttons.
+        The second screen highlights new events. The our-offers
+        screen layouts coupons. The trending screen describes the popeyes'
+        attitude toward COVID-19. The fan-favorites screen introduces people to
+        products that they are most proud of. Finally, the last screen shows the
+        buttons as the first screen. I identify useability and accessibility problems in the following paragraphs.</p>
+      <p><em>The menu</em> is important for first-time users. Every time I
+        visit a new restaurant, the first thing I do is to read their menu. I
+        don't know if this behavior applies to everyone but I believe this is one
+        of the most common first-time-users behavior. Unfortunately, the link to
+        Popeyes'&nbsp;menu is surprisingly difficult to find. One link is at the
+        end of the <em>fifth</em> screen. Another is in the navigation bar, under
+        the <code>More</code> dropdown.</p>
+      <p><em>Contrast of text and background</em> is poor, I would say, on
+        this page. As we will point out soon in <a href="https://wave.webaim.org/">​WebAIM WAVE​</a> analysis, some
+        white texts on orangish or complicated backgrounds are difficult to read. This shortcoming hurts all kinds of
+        users.</p>
+      <p><em>Distracting elements</em> occur in several places. For instance, who cares about the shopping cart
+        (top-right) before seeing the menu? The trending screen is also distracting. A single piece of information
+        doesn't deserve a whole screen.
+      </p>
+      <p><em>Keep saying 'order'</em> even when it is not appropriate is another annoying point of this webpage. There
+        are <strong>4</strong> 'ORDER NOW's on the second screen. Also, why should people order now if they want to
+        'check out our new offers'?</p>
+      <p><em>Poor layout</em> confuses first-time users and casual users. Look at the fan-favorite section, can you tell
+        me in one second which text block is describing the chicken sandwich? I feel it difficult to associate pictures
+        with their descriptions in this figure. Even worse, the last column contains the same information as the first
+        but is displayed in the reversed order.</p>
+      <p><em>Accessibility analysis</em> with WebAIM WAVE reviews 1 error, 5 contrast errors, and 5 alerts. Looks not
+        too much? This is because WebAIM WAVE cannot even see the whole page! The page refreshes automatically,
+        preventing WebAIM WAVE and screen readers to process it properly. Even in the limited visible information,
+        WebAIM WAVE finds one contrast error about white text on the orangish background.</p>
+    </figcaption>
+  </figure>
+  <h2 id="prototype">Prototype</h2>
+  <p>
+    To redesign the Popeyes website, I start by creating a low-fidelity prototype. This grayscale and simplistic
+    prototype focuses on the overall structure of web content and summarizes solutions to the problems mentioned in the
+    last
+    section. Later I refine this prototype to create a high-fidelity prototype, which should give all details that
+    should be presented in the final HTML implementation. I could have gone directly to HTML from the lo-fi prototype.
+    But
+    <a href="https://www.figma.com">Figma</a> is an amazing tool that speeds up the refinement of prototypes and
+    exploring alternative decisions on details.</p>
+  <h3 id="low-fidelity_prototype">Low-fidelity Prototypes</h3>
+  <p>The mockup (a Balsamiq JSON file) is available <a href="downloads/low-fidelity_prototype_balsamiq.json">here</a>.
+  </p>
+  <figure id="fig-lofi">
+    <img src="imgs/low-fidelity/desktop.png" alt="low-fidelity prototype for desktop">
+    <img src="imgs/low-fidelity/tablet.png" alt="low-fidelity prototype for tablet">
+    <img src="imgs/low-fidelity/mobile.png" alt="low-fidelity prototype for mobile">
+    <figcaption>
+      <p><strong>Figure 2. Low-fidelity prototypes of the Popeyes webpage</strong> The left one is for large
+        screens, such as desktops. The two prototypes in the right column are for tablets and mobile phones
+        respectively.
+        I circle key points with colored and dashed rectangles. Their corresponding annotations are as followed:</p>
+      <p>
+        <span style="color: #3465a4;">■</span>
+        Links to the menu are made obvious.
+        <span style="color: #ff4000;">■</span>
+        The shopping cart icon is removed from the navigation bar because it means nothing before users choosing any
+        food. I
+        expect an icon for the cart to show up at the bottom right corner after a user adds an item to the cart. The
+        position for the shopping cart is now for a sign-up button,
+        for the convenience of first-time users.
+        <span style="color: #00a933;">■</span>Whether users want to get their food by delivery or pick-up, they must
+        enter an address first. So I think it would be convenient to raise the address input box to the first level. I
+        also remove the word 'ORDER' because it occurred too frequently.
+        <span style="color: #8d281e;">■</span> To achieve responsiveness, links in the navigation bar are gathered into
+        a side navigation panel.
+      </p>
+      <p>
+        I didn't forget the other problems. I improve the contrast of texts and their background, as we will see in the
+        final section together with improved accessibility. The confusing fan-favorites screen is removed. If Popeyes
+        want to show products they are proud of, they can use the images as the background of the first screen.
+      </p>
+    </figcaption>
+  </figure>
+  <h3 id="high-fidelity_prototype">High-fidelity Prototypes</h3>
+  <p>The mock is available at <a href="https://www.figma.com/files/project/17030231/POPEYES">this link</a>.</p>
+  <figure id="fig-hifi">
+    <img src="imgs/high-fidelity/desktop.png" alt="high-fidelity prototype for large screens">
+    <img src="imgs/high-fidelity/side-nav.png" alt="navigation bar at side">
+    <img src="imgs/high-fidelity/tablet-main.png" alt="high-fidelity prototype for tablets">
+    <img src="imgs/high-fidelity/mobile-main_trimed.png" alt="high-fidelity prototype for mobile phones">
+    <figcaption>
+      <p><strong>Figure 3. High-fidelity prototypes of the Popeyes webpage</strong>
+      </p>
+      <p>The one for large screens is shown at the top. The three images at the bottom, from left to right, are the
+        navigation
+        bar for tablets and mobile phones, the main part of a tablet prototype, and the main part of a mobile prototype.
+        A complete tablet (resp. mobile) prototype is the main part plus the navigation bar.
+      </p>
+      <p>The side navigation bar (only applicable to tablets and mobiles) should slide in from left to right once the
+        button at the top-left corner is clicked. A user might tap other areas to put back the navigation bar.</p>
+      <p>Another different thing in the header is the group of sign-up and log-in buttons. In non-large screens, only
+        the log-in button is shown, and with a different style</p>
+      <p>The gallery of fans' favorite foods (i.e. apple pie, chicken sandwich, and mashed potato) is shown with a
+        square on mobile screens. Users may swap horizontally the shown picture to see others.</p>
+      <p>To achieve responsiveness, the offers section should use a flexbox to contains the coupons.</p>
+      <p>Finally, the buttons for adding foods to the cart are simpler on mobile screens. For each menu item, there
+        should
+        be two sets of buttons but only one set is shown on specific screen size.</p>
+      <p>Please refer to the visual design style guide (next section) on how visual elements react to some other user
+        actions.</p>
+    </figcaption>
+  </figure>
+
+  <h3>Visual Design Style Guide</h3>
+  <figure>
+    <table id="table-controls">
+      <tbody>
+        <tr>
+          <th>Button</th>
+          <td>
+            <table class="table-buttons">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="button light">Normal</div>
+                  </td>
+                  <td>
+                    <div class="button dark">Normal</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="button light hovered">Hovered</div>
+                  </td>
+                  <td>
+                    <div class="button dark hovered">Hovered</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Switch</th>
+          <td>
+            <div class="switch">
+              <button>-</button>
+              <span>0</span>
+              <button>+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Input box</th>
+          <td>
+            <table class="table-buttons">
+              <tbody>
+                <tr>
+                  <td>
+                    <form>
+                      <label>
+                        Label: 
+                        <input type="text" class="input-box" placeholder="placeholder">
+                      </label>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <form>
+                      <label>
+                        Label: 
+                        <input type="text" class="input-box" placeholder="placeholder" value="some input">
+                      </label>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h2>Final Result</h2>
+  <p>Here is <a href="new/index.html">the redesigned page</a>. The new page for Popeyes is responsive to different sizes
+    of browsers and to font sizes. Furthermore, the redesigned webpage is more accessible on different devices -- no
+    error or contrast error is reported by WebAIM WAVE.</p>
+
+  <footer></footer>
+</body>
+
+</html>

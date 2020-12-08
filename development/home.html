@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en-US">
+
+<head>
+  <title>Development</title>
+  <link rel="stylesheet" href="index.css">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+  <header></header>
+  <h1>An Online Grocery</h1>
+  <p>
+    I created a toy online grocery that sells only fruits and vegetables. This web app has little value to end-users because you cannot do much beyond playing with the user interface. However, web app designers might find the UI design interesting and want to read my Rationale for Design. Web developers, especially React developers, might also this web app interesting because I created a React component that is capable of displaying and editing table data. Links:
+  </p>
+  <ul>
+    <li><a href="https://ancient-dusk-11942.herokuapp.com/">Demo</a></li>
+    <li><a href="https://github.com/LuKC1024/CSCI-1300-DEVELOPMENT-APP">GitHub Repo</a></li>
+  </ul>
+  <h2 id="section-1-rationale">Rationale for Design</h2>
+  <p>
+    The overall structure of the UI is divided into three parts: a control panel, a view
+    of the inventory (list of all kinds of goods), and an aggregator. The gap between the 
+    control and the inventory is closer than the gap between them and the aggregator.
+    This difference in gaps suggest the logical connections between the parts as the controller
+    filters and sorts the inventory items.
+  </p>
+  <p>
+    Let us focus on the control panel. Here I use a hierarchy of <code>fieldset</code>
+    to organize controllers. I am aware that <code>fieldset</code>s are not very visually appealing.
+    But I believe using these semantic elements makes this web app more accessible to those
+    who cannot use a modern web browser, such as people with visual disability. 
+  </p>
+  <p>
+    I believe a good UI must state the underlying model in a clear but simple way.
+    The filter controllers are a consequence of my belief. Look at the two checkboxes
+    for the counts. There is an implicit logical <em>or</em> between them. Conversely, the logical connective between
+    the by-count and the by-color <code>fieldset</code> should be logical <em>and</em>.
+    The choice of the two logical connectives might not be immediately clear.
+    To make the logic clear, I put an <code>and</code> between the two sub-<code>fieldset</code>s.
+  </p>
+  <p>
+    The tables are two of my favorite parts of this web app. I used colors to differentiate
+    table controls (light grey), table headers (black), and table bodies (white).
+    I carefully used a thin border between columns and a thick border between rows.
+    Font style is also employed to stress the hierarchy of information. The table headers
+    are in bold font while the bodies are normal.
+  </p>
+  <footer></footer>
+</body>
+
+</html>

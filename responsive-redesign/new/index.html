@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="en-US">
+
+<head>
+  <title>POPEYES</title>
+  <link rel="stylesheet" href="popeyes-style.css">
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+  <header class="small-only medium-only">
+    <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+      onclick="document.getElementsByTagName('nav')[0].classList.remove('hidden')">
+      <line x1="0.575989" y1="1.5" x2="29" y2="1.5" stroke="#F25600" stroke-width="3" />
+      <line x1="0.575989" y1="11.5" x2="29" y2="11.5" stroke="#F25600" stroke-width="3" />
+      <line x1="0.575989" y1="22.5" x2="29" y2="22.5" stroke="#F25600" stroke-width="3" />
+    </svg>
+    <a href="https://www.popeyes.com/signin" class="button dark">Log In</a>
+    <nav class="hidden">
+      <div>
+        <img src="imgs/deliver-icon.png" alt="A delivering chicken">
+        <ul>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="https://www.popeyes.com/store-locator">Restaurant</a></li>
+          <li><a href="https://www.popeyes.com">More</a></li>
+        </ul>
+        <div class="spacer"></div>
+        <a href="https://www.popeyes.com/signin">Log In</a>
+      </div>
+      <div onclick="document.getElementsByTagName('nav')[0].classList.add('hidden')"></div>
+    </nav>
+  </header>
+  <header class="large-only">
+    <nav>
+      <ul>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="https://www.popeyes.com/store-locator">Restaurant</a></li>
+        <li><a href="https://www.popeyes.com">More</a></li>
+      </ul>
+      <a href="https://www.popeyes.com/signup" class="button light">Sign Up</a>
+      <a href="https://www.popeyes.com/signin" class="button dark">Log In</a>
+    </nav>
+  </header>
+  <h1>POPEYES</h1>
+  <section class="body">
+    <ul class="gallery">
+      <li style="background-image: url(imgs/favorites1.png);"></li>
+      <li style="background-image: url(imgs/favorites2.png);"></li>
+      <li style="background-image: url(imgs/favorites3.png);"></li>
+    </ul>
+    <strong>Free Delivery on Us, Any Order</strong>
+    <form class="search" name="search">
+      <label for="location" style="display: none;">Location</label>
+      <input class="input-box" type="text" id="location" name="location" placeholder="🔍 Find a restaurant near you">
+    </form>
+    <h2 id="offers">Offers</h2>
+    <ul class="offers">
+      <li><a href="#"><img src="imgs/offer1.png"
+            alt="$6.00 3 TENDERS COMBO (PLUS TAX): 3 TENDERS, REGULAR SIDE, BISCUIT, and SMALL DRINK"></a></li>
+      <li><a href="#"><img src="imgs/offer2.png"
+            alt="DELIVERY SPECIAL - $12.00 2 CAN DINE (PLUS TAX): 5PCS CHICKEN, 2 REGULAR SIDES and 2 BISCUITS"></a>
+      </li>
+      <li><a href="#"><img src="imgs/offer3.png"
+            alt="FIRST ORDER SPECIAL - $2 OFF $10+: $3 Off w/ Purshase of $10+"></a></li>
+    </ul>
+    <h2 id="menu">Menu</h2>
+    <ul class="menu">
+      <li>
+        <img src="imgs/food1.jpg" alt="Chicken Sandwich">
+        <div>
+          <h3>Chicken Sandwich</h3>
+          <p class="large-only medium-only">A tender all-white meat chicken
+            breast fillet, marinated in an authentic blend of
+            Louisiana seasonings, then hand battered and breaded in our all
+            new buttermilk coating. Served with crisp barrel cured pickles
+            and Classic or Spicy Mayonnaise, served on a warm and toasted
+            buttery brioche bun.</p>
+          <div class="large-only medium-only">
+            <div class="switch">
+              <button>-</button>
+              <span>0</span>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="small-only"><button class="button dark">Add to Cart</button></div>
+        </div>
+      </li>
+      <li>
+        <img src="imgs/food2.jpg" alt="1/4 LB Popcorn Shrimp Meal">
+        <div>
+          <h3>1/4 LB Popcorn Shrimp Meal</h3>
+          <p class="large-only medium-only">Tender, crispy popcorn shrimp seasoned in Louisiana herbs and spices then
+            served up
+            crispy in our unique
+            Southern-style breading. Pair it with a signature side and a hot buttery biscuit.</p>
+          <div class="large-only medium-only">
+            <div class="switch">
+              <button>-</button>
+              <span>0</span>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="small-only"><button class="button dark">Add to Cart</button></div>
+        </div>
+      </li>
+      <li>
+        <img src="imgs/food3.jpg" alt="Cajun Fries">
+        <div>
+          <h3>Cajun Fries</h3>
+          <p class="large-only medium-only">They may look like French fries, but our special seasoning makes them 100%
+            Cajun.</p>
+          <div class="large-only medium-only">
+            <div class="switch">
+              <button>-</button>
+              <span>0</span>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="small-only"><button class="button dark">Add to Cart</button></div>
+        </div>
+      </li>
+      <li>
+        <img src="imgs/food4.jpg" alt="Beverages">
+        <div>
+          <h3>Beverages</h3>
+          <p class="large-only medium-only">Add a cold, refreshing beverage to round out your meal.</p>
+          <div class="large-only medium-only">
+            <div class="switch">
+              <button>-</button>
+              <span>0</span>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="small-only"><button class="button dark">Add to Cart</button></div>
+        </div>
+      </li>
+    </ul>
+    <footer></footer>
+  </section>
+</body>
+
+</html>
